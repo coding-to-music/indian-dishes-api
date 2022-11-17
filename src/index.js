@@ -3,6 +3,8 @@ import express from 'express';
 import { setupConnection } from './connection.js';
 import foodRouter from './routes/FoodRoutes.js';
 
+const Port = process.env.PORT || 3000;
+
 // load env config
 config();
 
@@ -16,8 +18,8 @@ app.use(express.json());
 
 app.use('/api/foods', foodRouter);
 
-app.listen(3001, () => {
-  console.log('Server is running on port 3001');
+app.listen(Port, () => {
+  console.log(`Server is running on port ${Port}`);
 });
 
 export default app;
