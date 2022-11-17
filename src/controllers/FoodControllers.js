@@ -1,10 +1,16 @@
 import * as foodService from '../services/FoodServices.js';
 
-export const getAllFoods = async (_, res) => {
+export const getAllFoods = async (req, res) => {
   try {
-    const foods = await foodService.getAllFoods();
+    const { foods, currentPage, totalPages } = await foodService.getAllFoods(
+      req.query
+    );
 
-    res.json({ data: foods, status: 'success' });
+    res.json({
+      data: foods,
+      status: 'success',
+      pagination: { currentPage, totalPages },
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

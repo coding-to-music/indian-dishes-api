@@ -1,7 +1,22 @@
 import { IndianFoods as FoodModel } from '../schema/food.js';
 
-export const getAllFoods = async () => {
-  return await FoodModel.find();
+export const getAllFoods = async (props = {}) => {
+  const { page = 1, limit = 10 } = props;
+
+  // execute query with page and limit values
+  const foods = await FoodModel.find()
+    .limit(limit * 1)
+    .skip((page - 1) * limit)
+    .exec();
+
+  // get total documents in the Posts collection
+  const count = await FoodModel.countDocuments();
+
+  return {
+    foods,
+    totalPages: Math.ceil(count / limit),
+    currentPage: Number(page),
+  };
 };
 
 export const createFood = async (blog) => {
