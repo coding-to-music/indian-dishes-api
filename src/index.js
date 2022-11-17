@@ -16,7 +16,7 @@ const app = express();
 //middleware
 app.use(express.json());
 
-app.use('/api/foods', foodRouter);
+app.use('/', foodRouter);
 
 app.listen(Port, () => {
   console.log(`Server is running on port ${Port}`);
