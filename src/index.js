@@ -5,7 +5,7 @@ import foodRouter from './routes/FoodRoutes.js';
 import cors from 'cors';
 
 const corsObject = cors({
-  origin: ['http://localhost:3000/'],
+  origin: ['http://localhost:3000'],
 });
 
 const Port = process.env.PORT || 3000;
