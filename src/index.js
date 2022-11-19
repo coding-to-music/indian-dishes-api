@@ -2,6 +2,11 @@ import { config } from 'dotenv';
 import express from 'express';
 import { setupConnection } from './connection.js';
 import foodRouter from './routes/FoodRoutes.js';
+import cors from 'cors';
+
+const corsObject = cors({
+  origin: ['http://localhost:3000/'],
+});
 
 const Port = process.env.PORT || 3000;
 
@@ -15,8 +20,9 @@ const app = express();
 
 //middleware
 app.use(express.json());
+app.use(corsObject);
 
-app.use('/', foodRouter);
+app.use('/api', foodRouter);
 
 app.listen(Port, () => {
   console.log(`Server is running on port ${Port}`);
