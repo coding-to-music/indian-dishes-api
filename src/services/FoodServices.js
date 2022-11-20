@@ -1,7 +1,7 @@
 import { IndianFoods as FoodModel } from '../schema/food.js';
 
 export const getAllFoods = async (props = {}) => {
-  const { page = 1, limit = 10, search } = props;
+  const { page = 1, limit = 10, search, state, course } = props;
   if (!search) {
     // execute query with page and limit values
     const foods = await FoodModel.find()
@@ -28,6 +28,12 @@ export const getAllFoods = async (props = {}) => {
               wildcard: '*',
             },
           },
+        },
+      },
+      {
+        $match: {
+          ...(state ? { state: state } : {}),
+          ...(course ? { course: course } : {}),
         },
       },
     ]);
