@@ -1,22 +1,39 @@
 import { IndianFoods as FoodModel } from '../schema/food.js';
 
 export const getAllFoods = async (props = {}) => {
-  const { page = 1, limit = 10 } = props;
+  const { page = 1, limit = 10, search } = props;
+  if (!search) {
+    // execute query with page and limit values
+    const foods = await FoodModel.find()
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
 
-  // execute query with page and limit values
-  const foods = await FoodModel.find()
-    .limit(limit * 1)
-    .skip((page - 1) * limit)
-    .exec();
+    // get total documents in the Posts collection
+    const count = await FoodModel.countDocuments();
 
-  // get total documents in the Posts collection
-  const count = await FoodModel.countDocuments();
+    return {
+      foods,
+      totalPages: Math.ceil(count / limit),
+      currentPage: Number(page),
+    };
+  } else {
+    const foods = await FoodModel.aggregate([
+      {
+        $search: {
+          index: 'dynamic_index',
+          text: {
+            query: search,
+            path: {
+              wildcard: '*',
+            },
+          },
+        },
+      },
+    ]);
 
-  return {
-    foods,
-    totalPages: Math.ceil(count / limit),
-    currentPage: Number(page),
-  };
+    return { foods };
+  }
 };
 
 export const createFood = async (blog) => {
