@@ -1,18 +1,18 @@
-# mongodb-indian-dishes-api
+# indian-dishes-api
 
 # 🚀 Indian Dishes Catalog API 🚀
 
-https://github.com/coding-to-music/mongodb-indian-dishes-api
+https://github.com/coding-to-music/indian-dishes-api
 
-https://mongodb-indian-dishes-api.vercel.app
+https://indian-dishes-api.vercel.app
 
 From / By https://github.com/Sachin-chaurasiya/indian-dishes-api
 
-https://devxmongodb-hackathon.onrender.com/api
+https://devxhackathon.onrender.com/api
 
 https://indian-dishes.netlify.app/
 
-https://dev.to/sachinchaurasiya/mongodb-2022-hackathon-submission-introducing-indian-dishes-catalog-1coa
+https://dev.to/sachinchaurasiya/2022-hackathon-submission-introducing-indian-dishes-catalog-1coa
 ## Environment variables:
 
 ```java
@@ -29,7 +29,7 @@ git add .
 git remote remove origin
 git commit -m "first commit"
 git branch -M main
-git remote add origin git@github.com:coding-to-music/mongodb-indian-dishes-api.git
+git remote add origin git@github.com:coding-to-music/indian-dishes-api.git
 git push -u origin main
 ```
 
@@ -37,7 +37,7 @@ git push -u origin main
 
 ## Available endpoints
 
-**Base URL** : https://devxmongodb-hackathon.onrender.com/api
+**Base URL** : https://devxhackathon.onrender.com/api
 
 **GET dishes list**
 
