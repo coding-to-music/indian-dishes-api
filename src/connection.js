@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 config();
 
 export const setupConnection = async () => {
-  const connectionString = process.env.DB_URL;
+  const connectionString = process.env.MONGO_URI;
   try {
     mongoose
       .connect(connectionString, {

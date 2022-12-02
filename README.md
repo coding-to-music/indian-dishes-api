@@ -1,3 +1,38 @@
+# mongodb-indian-dishes-api
+
+# 🚀 Indian Dishes Catalog API 🚀
+
+https://github.com/coding-to-music/mongodb-indian-dishes-api
+
+https://mongodb-indian-dishes-api.vercel.app
+
+From / By https://github.com/Sachin-chaurasiya/indian-dishes-api
+
+https://devxmongodb-hackathon.onrender.com/api
+
+https://indian-dishes.netlify.app/
+
+https://dev.to/sachinchaurasiya/mongodb-2022-hackathon-submission-introducing-indian-dishes-catalog-1coa
+## Environment variables:
+
+```java
+const connectionString = process.env.MONGO_URI;
+
+const Port = process.env.PORT || 3000;
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/mongodb-indian-dishes-api.git
+git push -u origin main
+```
+
 # Indian dishes catalog API
 
 ## Available endpoints
