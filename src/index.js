@@ -1,12 +1,17 @@
 import { config } from 'dotenv';
-import express from 'express';
-import { setupConnection } from './connection.js';
-import foodRouter from './routes/FoodRoutes.js';
 import cors from 'cors';
+import express from 'express';
+import foodRouter from './routes/FoodRoutes.js';
+import { setupConnection } from './connection.js';
+
+const orginsList = process.env.ALLOWED_ORGINS 
+console.log('orginsList', orginsList)
 
 const corsObject = cors({
-  origin: ['http://localhost:3000', 'https://indian-dishes.netlify.app'],
+  origin: orginsList
 });
+
+  // origin: ['http://localhost:3000', 'https://indian-dishes.netlify.app'],
 
 const Port = process.env.PORT || 3000;
 
