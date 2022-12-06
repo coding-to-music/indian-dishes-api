@@ -1,17 +1,17 @@
 import { config } from 'dotenv';
-// import cors from 'cors';
+import cors from 'cors';
 import express from 'express';
 import foodRouter from './routes/FoodRoutes.js';
 import { setupConnection } from './connection.js';
 
-// const orginsList = process.env.ALLOWED_ORGINS 
-// console.log('orginsList', orginsList)
+const originsList = process.env.ALLOWED_ORGINS 
+console.log('originsList', originsList)
 
-// const corsObject = cors({
-//   origin: orginsList
-// });
+const corsObject = cors({
+  origin: originsList
+});
 
-// console.log('corsObject  ', corsObject)
+console.log('corsObject  ', corsObject)
 
   // origin: ['http://localhost:3000', 'https://indian-dishes.netlify.app'],
 
@@ -27,7 +27,7 @@ const app = express();
 
 //middleware
 app.use(express.json());
-// app.use(corsObject);
+app.use(corsObject);
 
 app.use('/api', foodRouter);
 
