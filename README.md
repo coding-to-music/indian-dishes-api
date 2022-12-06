@@ -19,6 +19,11 @@ https://dev.to/sachinchaurasiya/2022-hackathon-submission-introducing-indian-dis
 const connectionString = process.env.MONGO_URI;
 
 const Port = process.env.PORT || 3000;
+
+export const API_CLIENT = axios.create({
+  baseURL: 'https://devxmongodb-hackathon.onrender.com/api',
+});
+
 ```
 
 ## GitHub
