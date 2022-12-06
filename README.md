@@ -86,3 +86,20 @@ This endpoint requires id of the dish that you want to delete
 <BASE_URL>/6371272e6faca87b81f70697
 ```
 
+## Seed the database
+
+```
+npm run seed
+```
+
+## Running locally
+
+```
+npm run start
+```
+
+http://localhost:3000/api
+
+```json
+{"data":[{"_id":"638fa0490b55d24d2f050318","name":"Balu shahi","ingredients":"Maida flour, yogurt, oil, sugar","diet":"vegetarian","prep_time":45,"cook_time":25,"flavor_profile":"sweet","course":"dessert","state":"West Bengal","region":"East","__v":0},{"_id":"638fa0490b55d24d2f050319","name":"Boondi","ingredients":"Gram flour, ghee, sugar","diet":"vegetarian","prep_time":80,"cook_time":30,"flavor_profile":"sweet","course":"dessert","state":"Rajasthan","region":"West","__v":0},{"_id":"638fa0490b55d24d2f05031a","name":"Gajar ka halwa","ingredients":"Carrots, milk, sugar, ghee, cashews, raisins","diet":"vegetarian","prep_time":15,"cook_time":60,"flavor_profile":"sweet","course":"dessert","state":"Punjab","region":"North","__v":0},{"_id":"638fa0490b55d24d2f05031b","name":"Ghevar","ingredients":"Flour, ghee, kewra, milk, clarified butter, sugar, almonds, pistachio, saffron, green cardamom","diet":"vegetarian","prep_time":15,"cook_time":30,"flavor_profile":"sweet","course":"dessert","state":"Rajasthan","region":"West","__v":0},{"_id":"638fa0490b55d24d2f05031c","name":"Gulab jamun","ingredients":"Milk powder, plain flour, baking powder, ghee, milk, sugar, water, rose water","diet":"vegetarian","prep_time":15,"cook_time":40,"flavor_profile":"sweet","course":"dessert","state":"West Bengal","region":"East","__v":0},{"_id":"638fa0490b55d24d2f05031d","name":"Imarti","ingredients":"Sugar syrup, lentil flour","diet":"vegetarian","prep_time":10,"cook_time":50,"flavor_profile":"sweet","course":"dessert","state":"West Bengal","region":"East","__v":0},{"_id":"638fa0490b55d24d2f05031e","name":"Jalebi","ingredients":"Maida, corn flour, baking soda, vinegar, curd, water, turmeric, saffron, cardamom","diet":"vegetarian","prep_time":10,"cook_time":50,"flavor_profile":"sweet","course":"dessert","state":"Uttar Pradesh","region":"North","__v":0},{"_id":"638fa0490b55d24d2f05031f","name":"Kaju katli","ingredients":"Cashews, ghee, cardamom, sugar","diet":"vegetarian","prep_time":10,"cook_time":20,"flavor_profile":"sweet","course":"dessert","state":"-1","region":"-1","__v":0},{"_id":"638fa0490b55d24d2f050320","name":"Kalakand","ingredients":"Milk, cottage cheese, sugar","diet":"vegetarian","prep_time":20,"cook_time":30,"flavor_profile":"sweet","course":"dessert","state":"West Bengal","region":"East","__v":0},{"_id":"638fa0490b55d24d2f050321","name":"Kheer","ingredients":"Milk, rice, sugar, dried fruits","diet":"vegetarian","prep_time":10,"cook_time":40,"flavor_profile":"sweet","course":"dessert","state":"-1","region":"-1","__v":0}],"status":"success","pagination":{"currentPage":1,"totalPages":26}}
+```
