@@ -11,7 +11,7 @@ const corsObject = cors({
   origin: orginsList
 });
 
-console.log('corsObject ', corsObject)
+console.log('corsObject  ', corsObject)
 
   // origin: ['http://localhost:3000', 'https://indian-dishes.netlify.app'],
 
