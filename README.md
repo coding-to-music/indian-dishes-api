@@ -10,6 +10,8 @@ From / By https://github.com/Sachin-chaurasiya/indian-dishes-api
 
 https://devxhackathon.onrender.com/api
 
+https://devxmongodb-hackathon.onrender.com/api
+
 https://indian-dishes.netlify.app/
 
 https://dev.to/sachinchaurasiya/2022-hackathon-submission-introducing-indian-dishes-catalog-1coa
