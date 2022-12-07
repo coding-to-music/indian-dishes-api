@@ -14,7 +14,7 @@ https://devxmongodb-hackathon.onrender.com/api
 
 https://indian-dishes.netlify.app/
 
-https://dev.to/sachinchaurasiya/2022-hackathon-submission-introducing-indian-dishes-catalog-1coa
+https://dev.to/sachinchaurasiya/mongodb-2022-hackathon-submission-introducing-indian-dishes-catalog-1coa
 ## Environment variables:
 
 ```java
